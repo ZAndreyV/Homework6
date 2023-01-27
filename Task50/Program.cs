@@ -12,9 +12,9 @@ Console.Write("Enter number of colomns: ");
 int colomns = Convert.ToInt32(Console.ReadLine());
 
 
-int[,] CreatMatrixRndInt(int rows, int colomns, int min, int max)
+int[,] CreatMatrixRndInt(int row, int colomn, int min, int max)
 {
-    int[,] matr = new int[rows, colomns];
+    int[,] matr = new int[row, colomn];
     Random rnd = new Random();
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -45,8 +45,8 @@ void PrintMatrix(int[,] matr)
 
 void ValueOfElementInMatrix(int[,] matr, int row, int colomn)
 {
-    if (row <= matr.GetLength(0)-1 && colomns <= matr.GetLength(1)-1) 
-    Console.WriteLine($"The value of this element: {row}, {colomns} -> {matr[row,colomns]}");
+    if (row <= matr.GetLength(0)-1 && colomn <= matr.GetLength(1)-1) 
+    Console.WriteLine($"The value of this element: {row}, {colomn} -> {matr[row,colomn]}");
     else Console.WriteLine($"{row},{colomns} -> there is no such element in the matrix");
 }
 
